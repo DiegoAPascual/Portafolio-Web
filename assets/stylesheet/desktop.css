@@ -23,9 +23,9 @@ nav.nav_menu a {
 
 nav.nav_menu a:hover,
 nav.nav_menu a.active {
-    color: var(--beaver);
+    color: var(--main-color);
     padding: .5rem;
-    border-bottom: 1px solid var(--beaver);
+    border-bottom: 1px solid var(--main-color);
     transition: all .5s;
 }
 
@@ -120,44 +120,35 @@ div.btn {
 
 .container_button {
     display: flex;
+    gap: 2rem;
 }
-
-.cv_button {
-    background: none;
-    color: var(--beaver);
-    border: 1px solid var(--beaver);
-    margin-right: 1rem;
-    transition: .2s;
-}
-
-.cv_button:hover {
-    background: var(--black);
-    box-shadow: 0px 2px 10px #141414;
-    transition: 1s transform;
-}
-
-.contact_button {
+.cv_button, .contact_button {
     display: inline-block;
-    background-color: var(--beaver);
-    border-radius: 3rem;
-    padding: .7rem 4rem .6rem 4rem;
-    color: var(--jet);
+    background: var(--main-color);
+    border-radius: 1.5rem;
+    padding: .6rem 2rem;
+    color: white;
     font-family: 'Cooper Hewitt';
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.6rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin: 2rem 0 2rem 1rem;
-    border: none;
+    letter-spacing: 0.3rem;
+    margin: 2rem 0;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
-    transition: .4s;
+    opacity: 0.9;
 }
 
-.contact_button:hover {
-    background-color: #776254;
-    box-shadow: 0px 2px 10px #141414;
-    transition: 1s transform;
+.cv_button:hover, .contact_button:hover {
+    transform: scale(1.1);
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    opacity: 1;
 }
+
 
 .links {
     width: 5%;
@@ -243,7 +234,7 @@ div.btn {
 
 .cards--habilidades:hover {
     filter: saturate(100%);
-    border: 1px solid var(--beaver);
+    border: 1px solid var(--main-color);
     transition: all 1s;
 }
 
@@ -265,7 +256,7 @@ div.btn {
 }
 
 .cards--formacion:hover {
-    border: 1px solid var(--beaver);
+    border: 1px solid var(--main-color);
     box-shadow: 0 10px 16px -6px rgb(5 5 5 / 30%), 0 25px 10px -24px rgb(5 5 5 / 10%);
     transform: scale(1.1);
     transition: .4s all;
