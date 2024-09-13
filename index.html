@@ -325,15 +325,15 @@
                         <p data-section="contacto" data-value="text">Complete el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
                     </div>
 
-                    <form id="form" class="form-contact" name="contacto-portafolio" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+                    <form id="form" class="form-contact" name="contacto-portafolio" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <!-- Campo honeypot oculto para evitar bots -->
                         <input type="hidden" name="bot-field">
                     
                         <!-- Campos del formulario -->
-                        <input id="nombre" type="text" name="name" placeholder="Ingrese su nombre completo" required>
-                        <input id="email" type="email" name="email" placeholder="micorreo@gmail.com" required>
-                        <input id="asunto" type="text" name="affair" placeholder="Asunto" required>
-                        <textarea id="mensaje" cols="20" rows="4" name="message" placeholder="Mensaje" required></textarea>
+                        <input id="nombre" type="text" name="Nombre" placeholder="Ingrese su nombre completo" required>
+                        <input id="email" type="email" name="Correo electrónico" placeholder="micorreo@gmail.com" required>
+                        <input id="asunto" type="text" name="Asunto" placeholder="Asunto" required>
+                        <textarea id="mensaje" cols="20" rows="4" name="Mensaje" placeholder="Mensaje" required></textarea>
                     
                         <!-- Botón de envío -->
                         <div class="btn_form--contacto">
@@ -373,6 +373,7 @@
 
     <!-- Archivo Js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Librería de animaciones -->
     <script>

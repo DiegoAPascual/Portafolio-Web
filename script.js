@@ -68,3 +68,20 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Capturamos el evento de submit del formulario
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    // Mostrar la alerta SweetAlert2
+    Swal.fire({
+        icon: 'success', 
+        title: '¡Mensaje enviado!',
+        text: 'Gracias por contactarme. Te responderé lo antes posible.',
+        showConfirmButton: false, 
+        timer: 3500, 
+        background: '#088C5C', 
+        color: '#ffffff', 
+        iconColor: '#0F0F26', 
+    });
+});
