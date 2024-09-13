@@ -325,15 +325,19 @@
                         <p data-section="contacto" data-value="text">Complete el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
                     </div>
 
-                    <form id="form" class="form-contact" name="contacto-portafolio" netlify>
+                    <form id="form" class="form-contact" name="contacto-portafolio" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+                        <!-- Campo honeypot oculto para evitar bots -->
+                        <input type="hidden" name="bot-field">
+                    
+                        <!-- Campos del formulario -->
                         <input id="nombre" type="text" name="name" placeholder="Ingrese su nombre completo" required>
                         <input id="email" type="email" name="email" placeholder="micorreo@gmail.com" required>
                         <input id="asunto" type="text" name="affair" placeholder="Asunto" required>
                         <textarea id="mensaje" cols="20" rows="4" name="message" placeholder="Mensaje" required></textarea>
-
+                    
+                        <!-- Botón de envío -->
                         <div class="btn_form--contacto">
-                            <button id="btn-enviar" type="submit" data-section="contacto"
-                                data-value="btn-enviar">Enviar</button>
+                            <button id="btn-enviar" type="submit" data-section="contacto" data-value="btn-enviar">Enviar</button>
                         </div>
                     </form>
                 </div>
