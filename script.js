@@ -69,3 +69,19 @@ document.querySelector('.go-top-container').addEventListener('click', () => {
     });
 });
 
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío inmediato del formulario
+
+    // Mostrar la alerta
+    var alert = document.getElementById('myAlert');
+    alert.style.display = 'block';
+
+    // Ocultar la alerta después de 4 segundos
+    setTimeout(function() {
+        alert.style.display = 'none';
+    }, 4000);
+
+     // Limpiar el formulario
+     this.reset();
+});
+
